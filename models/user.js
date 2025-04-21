@@ -15,6 +15,7 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true,
+        select: false,
     },
     image: {
         type: String,       
@@ -23,6 +24,7 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
+    
 
 }, { timestamps: true });
 

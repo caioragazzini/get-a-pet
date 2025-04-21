@@ -1,15 +1,9 @@
 const express = require('express');
-const cors = require('cors');
 
-// configurando cors
-const corsOptions = {
-    origin :'*',
-    optionsSuccessStatus : 200,
-}
-
+const v1Router = require('./v1');
 
 const router = express.Router();
-router.use(express.json());
 
+router.use('/v1', v1Router);
 
 module.exports = router;
