@@ -9,6 +9,7 @@ const logaUsuario = async (email, senha) => {
     }
     const usuario = await User.findOne({email:email}).select('password email');
 
+    console.log("🚀 ~ logaUsuario ~ usuario:", usuario)
    
     if(!usuario){
         throw new Error('Usuário não encontrado');          
